@@ -17,12 +17,12 @@ namespace SistemaDeDevolucao.TESTE
     {
         static DSL.DSLComumATodos driver = new DSL.DSLComumATodos();
         RemoteWebDriver driverFF = driver.IrParaCosmosNet();
-         xasdas
+        
         #region Funcionario
         string matricula = "108674";
         string senha = "teste";
         #endregion
-
+        
         #region URL
         string urlConsultarExcesso = "http://cosmosnethomo.pmenos.com.br/ReactDevolucaoLoja/#/ConsultarExcesso";
         #endregion
@@ -64,6 +64,5 @@ namespace SistemaDeDevolucao.TESTE
             //driverFF.Quit();
 
         }
-
     }
 }
