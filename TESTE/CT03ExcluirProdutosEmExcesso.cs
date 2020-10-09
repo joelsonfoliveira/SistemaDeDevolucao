@@ -13,16 +13,16 @@ using System.Threading;
 namespace SistemaDeDevolucao.TESTE
 {
     [TestFixture]
-    public class CT01ExcluirProdutosEmExcesso
+    public class CT03ExcluirProdutosEmExcesso
     {
         static DSL.DSLComumATodos driver = new DSL.DSLComumATodos();
         RemoteWebDriver driverFF = driver.IrParaCosmosNet();
-        
+
         #region Funcionario
         string matricula = "108674";
         string senha = "teste";
         #endregion
-        
+
         #region URL
         string urlConsultarExcesso = "http://cosmosnethomo.pmenos.com.br/ReactDevolucaoLoja/#/ConsultarExcesso";
         #endregion
@@ -32,28 +32,26 @@ namespace SistemaDeDevolucao.TESTE
         {
             DSL.DSLLoginCosmosNet.driveFF = driverFF;
             DSL.DSLLoginCosmosNet.Logar(matricula, senha);
-            //DSL.DSLLoginCosmosNet.driveFF = driverFF;
         }
 
         [Test]
         public void ExcluirProdutos()
         {
-            DSL.DSLHomeDevolucao.driveFF = driverFF;
+            DSL.DSLProdutosEmExcesso.driveFF = driverFF;
             driver.IrParaURL(urlConsultarExcesso);
 
             Thread.Sleep(3000);
 
-            //DSL.DSLProdutosEmExcesso.ClicarEmExcluirProduto();
-            //DSL.DSLProdutosEmExcesso.ClicarEmCancelarExclusaoNoModal();
-
-            //DSL.DSLProdutosEmExcesso.ClicarEmExcluirProduto();
-            //DSL.DSLProdutosEmExcesso.ClicarEmFecharModal();
-
+            //DSL.DSLProdutosEmExcesso.C
             //for (int i=0; i<3; i++)
             //{
-                DSL.DSLProdutosEmExcesso.ClicarEmExcluirProduto();
-                DSL.DSLProdutosEmExcesso.ClicarEmConfirmarExclusaoNoModal();
-                //esperaimplicita
+            DSL.DSLProdutosEmExcesso.ClicarEmExcluirProduto();
+            DSL.DSLProdutosEmExcesso.ClicarEmConfirmarExclusaoNoModal();
+
+            DSL.DSLProdutosEmExcesso.EsperarBtnExcluirFicarVisivel();
+
+            DSL.DSLProdutosEmExcesso.ClicarEmExcluirProduto();
+            DSL.DSLProdutosEmExcesso.ClicarEmConfirmarExclusaoNoModal();
             //}
         }
 
@@ -62,7 +60,6 @@ namespace SistemaDeDevolucao.TESTE
         {
             //driverFF.Dispose();
             //driverFF.Quit();
-
         }
     }
 }

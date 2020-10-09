@@ -65,15 +65,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DSL\DSLComumATodos.cs" />
-    <Compile Include="DSL\DSLHomeDevolucao.cs" />
     <Compile Include="DSL\DSLLoginCosmosNet.cs" />
     <Compile Include="DSL\DSLProdutosEmExcesso.cs" />
-    <Compile Include="PAGE\PAGEHomeDevolucao.cs" />
     <Compile Include="PAGE\PAGEComumATodos.cs" />
     <Compile Include="PAGE\PAGELoginCosmosNet.cs" />
     <Compile Include="PAGE\PAGEProdutosEmExcesso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TESTE\CT01ExcluirProdutosEmExcesso.cs" />
+    <Compile Include="TESTE\CT01CancelarExclusaoUsandoClique.cs" />
+    <Compile Include="TESTE\CT03ExcluirProdutosEmExcesso.cs" />
+    <Compile Include="TESTE\CT02CancelarExclusaoUsandoESC.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

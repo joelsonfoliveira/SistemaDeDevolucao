@@ -4,6 +4,8 @@ using System.Threading;
 using OpenQA.Selenium.Support.UI;
 using System;
 using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SistemaDeDevolucao.DSL
 {

@@ -16,7 +16,7 @@ namespace SistemaDeDevolucao.PAGE
         }
         public IWebElement BtnExcluirProduto()
         {
-           return NovodriveFF.FindElement(By.CssSelector("tr:nth-child(1) .svg-inline--fa"));
+           return NovodriveFF.FindElement(By.CssSelector("tr:nth-child(1) path"));
         }
         public IWebElement BtnConfirmarExclusaoNoModal()
         {
@@ -29,6 +29,10 @@ namespace SistemaDeDevolucao.PAGE
         public IWebElement BtnFecharOModal()
         {
             return NovodriveFF.FindElementByCssSelector(".swal2-close");
+        }
+        public IWebElement BtnESC()
+        {
+            return NovodriveFF.FindElementByCssSelector(".swal2-confirm");
         }
     }
 }
